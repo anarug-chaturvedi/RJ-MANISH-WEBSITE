@@ -61,7 +61,7 @@ export default function LandingPage() {
           /> */}
         </div>
 
-        <div className=" flex flex-col md:flex-row md:mb-16 min-h-screen">
+        <div className=" flex flex-col md:flex-row md:mb-16 md:min-h-screen">
           <div className=" md:w-5/12 lg:mt-[50px] mx-auto text-center flex flex-col  items-center px-2 md:px-0">
             <p
               className={`${publicaSans.className}text-white text-[33px] font-medium leading-9 `}
