@@ -1,0 +1,297 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  background-image: url("../public/FooterSection.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@layer base{
+  body{
+    @apply font-primary
+  }
+}
+
+/* animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: loop-scroll;
+    animation-timeline: auto;
+    animation-range-start: normal; */
+
+@layer utilities{
+  .paused{
+    animation-play-state: paused;
+  }
+}
+
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+/* 
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+@font-face {
+  font-family: 'Power Smurf';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Power Smurf Regular'), url('/fonts/powerSmurf1.woff') format('woff');
+  }
+
+  .powerSmurf {
+    font-family: 'Power Smurf', sans-serif;
+  }
+
+
+  .bg-transparent {
+    background-color: white;
+    box-shadow: none;
+  }
+  
+  .bg-normal {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  }
+  
+
+
+
+
+  /* our csss */
+  /* styles.module.css */
+
+.tab-container {
+  text-align: center;
+  width: var(--content-width);
+  margin: auto;
+  max-width: 1128px;
+}
+
+.tab-container .tab-content .title {
+  margin-bottom: 50px;
+  margin-top: 75px;
+}
+
+.tab-container .tab-content .title h1 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.tab-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.tab-heading-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  height: 124px;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  width: 180px;
+  height: 80px;
+}
+
+.tab-heading-item .tab-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 41%;
+  display: none;
+}
+
+.show-tab-arrow {
+  display: block !important;
+}
+
+.active-tab {
+  background: #ffbca3;
+  border-radius: 8px 8px 0px 0px;
+  font-size: 20px !important;
+}
+
+.tab-heading-content {
+  padding: 15px 0px;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #475467;
+}
+
+.border-heading {
+  border-left: 2px solid #bebebe;
+}
+
+.first-tab {
+  border-left: none;
+}
+
+.active-tab > .tab-heading-content {
+  border-left: none;
+  color: #101828;
+  font-weight: 500;
+}
+
+.tab-content {
+  min-height: 500px;
+}
+
+.tab-content-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.active-tab-content {
+  background-image: url("../public/slide-background-speak.svg");
+  background-color: #ffe8df;
+  display: none;
+  color: #475467;
+  border-radius: 16px;
+}
+
+.show-tab-content {
+  display: block;
+}
+
+.active-tab-content .divide-2 {
+  min-height: 590px;
+}
+
+.tab-container {
+  width: 90%;
+  margin: auto;
+}
+
+.tab-content-container .tab-content {
+  padding: 64px 8px 8px 8px;
+}
+
+.tab-heading {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.tab-heading-content {
+  height: 40px;
+  width: 83%;
+  margin: auto;
+}
+
+.tab-heading-item {
+  width: 180px;
+  height: 80px;
+}
+
+.tab-content .divide-2 {
+  grid-template-columns: 1fr;
+}
+
+.tab-content .tab-content-left .tab-content-box {
+  width: 90%;
+  margin: auto;
+}
+
+.tab-content .tab-content-right {
+  margin-top: 40px;
+}
+
+.tab-content .explore-tab-1 {
+  scale: 3;
+}
+
+.tab-content .tab-content-right img {
+  width: 100%;
+}
+
+
+
+
+/* testing  */
+#app {
+  height: 100%;
+}
+
+/* html,
+body {
+  position: relative;
+  height: 100%;
+} */
+
+/* body {
+  background: black;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+} */
+
+.swiper {
+  /* width: 100%;
+  height: 100%; */
+}
+
+.swiper-slide {
+  /* text-align: center; */
+  /* font-size: 18px; */
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.swiper-slide img {
+  /* display: block; */
+  /* width: 100%;
+  height: 100%; */
+  /* object-fit: cover; */
+}
+
+.swiper-slide {
+  /* width: 85%; */
+}
+
+/* .swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 20%;
+} */

@@ -1,0 +1,39 @@
+{
+  "name": "project4",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nextui-org/date-picker": "^2.1.2",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "axios": "^1.7.9",
+    "bcryptjs": "^3.0.2",
+    "firebase": "^11.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.511.0",
+    "mongoose": "^8.15.0",
+    "next": "14.2.3",
+    "next-qrcode": "^2.5.1",
+    "nodemailer": "^6.9.14",
+    "react": "^18",
+    "react-datepicker": "^7.1.0",
+    "react-dom": "^18",
+    "react-icons": "^5.4.0",
+    "react-toastify": "^10.0.5",
+    "resend": "^3.4.0",
+    "swiper": "^11.2.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
