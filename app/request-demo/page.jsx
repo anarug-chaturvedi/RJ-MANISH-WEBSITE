@@ -1,5 +1,4 @@
 import DemoFormSide from "@/components/DemoFormSide";
-import DemoText from "@/components/DemoText";
 import Footer from "@/components/HomePageComponent/Footer";
 import Navbar from "@/components/Navbar";
 import NeedHelp from "@/components/NeedHelp";

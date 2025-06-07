@@ -46,7 +46,7 @@ function Navbar() {
               className="  flex items-center border-none bg-[#5a39d6]
            text-white px-3 py-4 md:px-5 md:py-3  text-xs  sm:text-lg rounded-xl"
             >
-              Request Demo
+              Contact us
             </div>
           </Link>
         </div>

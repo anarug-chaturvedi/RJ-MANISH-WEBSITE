@@ -3,7 +3,6 @@ import Image from "next/image";
 import talent1 from "@/public/asset/talent1.png";
 import talent2 from "@/public/asset/talent2.png";
 import talent3 from "@/public/asset/talent3.png";
-import { Public_Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 const publicaSans = localFont({

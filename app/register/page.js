@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Eye, EyeOff, Loader2, LogIn } from "lucide-react";
+import { LogIn } from "lucide-react";
+import Link from "next/link";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function LoginForm() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [showPassword, setShowPassword] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,10 +22,13 @@ export default function LoginForm() {
     setIsLoading(true);
     setError(null);
     e.preventDefault();
+    console.log(formData);
 
     try {
-      console.log(formData);
+      await axios.post("/api/auth/register", formData);
+      router.push("/login");
     } catch (err) {
+      toast.error(err);
       setError("An unexpected error occurred");
     } finally {
       setIsLoading(false);
@@ -34,6 +39,12 @@ export default function LoginForm() {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      return router.push("/");
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -69,10 +80,15 @@ export default function LoginForm() {
                 />
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                 >
-                  <LogIn />
-                  <span className="ml-3">Sign Up</span>
+                  <LogIn />{" "}
+                  {isLoading ? (
+                    <span className="ml-3">Signing Up ...</span>
+                  ) : (
+                    <span className="ml-3">Sign Up</span>
+                  )}
                 </button>
                 <p className="mt-6 text-xs text-gray-600 text-center">
                   I agree to the
@@ -90,6 +106,12 @@ export default function LoginForm() {
                     Privacy Policy{" "}
                   </span>
                 </p>
+                <p className="mt-2">
+                  Already Have an account ?{" "}
+                  <Link href={"/login"} className="text-blue-500 underline">
+                    Login Now
+                  </Link>{" "}
+                </p>
               </form>
             </div>
           </div>
@@ -97,7 +119,6 @@ export default function LoginForm() {
         <div className="flex-1 bg-indigo-100 text-center hidden lg:flex">
           <div
             className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-            // style={{"background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');"}}
             style={{
               backgroundImage:
                 'url("https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg")',

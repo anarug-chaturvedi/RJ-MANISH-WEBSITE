@@ -105,11 +105,11 @@ export default function Footer({ pricing }) {
       <div className="my-[41px] md:mt-[60px]  flex flex-col items-center justify-center font-semibold md:w-4/12 md:pb-20">
         <ul className=" gap-y-[18px] md:space-y-[25px] text-sm md:text-[22px] font-semibold md:text-lg md:py-5 md:flex md:flex-col md:items-start text-center md:w-5/12">
           <li className="text-[17px] md:text-[25px]  uppercase mb-5 text-[#6D6D6D] ">
-            <span>Products</span>
+            <span>Courses</span>
           </li>
           <li>
-            <Link href="/" className="hover:underline">
-              RJ Manish
+            <Link href="/course" className="hover:underline">
+              All Courses
             </Link>
           </li>
         </ul>
@@ -120,53 +120,5 @@ export default function Footer({ pricing }) {
         />
       </div>
     </div>
-
-    // <footer className="bg-gray-100 text-gray-800 py-8 text-center">
-    //   <div className="max-w-4xl mx-auto px-4">
-    //     <h2 className="text-lg font-semibold">
-    //       StarKid: Where Talent Shines Bright! ✨
-    //     </h2>
-    //     <p className="mt-2 text-sm">Let’s Get Social!</p>
-
-    //     {/* Social Media Icons */}
-    //     <div className="flex justify-center gap-4 mt-3">
-    //     <Image src={inst} height={30} alt="starkid" />
-    //     <Image src={inst} height={30} alt="starkid" />
-    //     <Image src={inst} height={30} alt="starkid" />
-    //       {/* Link href="#" className="text-gray-700 hover:text-gray-900">
-    //         <FaTwitter size={20} />
-    //       </a> */}
-    //       {/* <a href="#" className="text-gray-700 hover:text-gray-900">
-    //         <FaFacebookF size={20} />
-    //       </a> */}
-    //       {/* <a href="#" className="text-gray-700 hover:text-gray-900">
-    //         <FaInstagram size={20} />
-    //       </a> */}
-    //     </div>
-
-    //     {/* Company Section */}
-    //     <div className="mt-8">
-    //       <h3 className="text-md font-semibold uppercase text-[#6D6D6D]">Company</h3>
-    //       <ul className="mt-3 space-y-2 text-sm">
-    //         <li><a href="#" className="hover:underline">About Us</a></li>
-    //         <li><a href="#" className="hover:underline">Contact Us</a></li>
-    //         <li><a href="#" className="hover:underline">Privacy Policy</a></li>
-    //         <li><a href="#" className="hover:underline">Refund & Cancellation Policy</a></li>
-    //         <li><a href="#" className="hover:underline">Shipping & Delivery</a></li>
-    //         <li><a href="#" className="hover:underline">Terms & Conditions</a></li>
-    //       </ul>
-    //     </div>
-
-    //     {/* Products Section */}
-    //     <div className="mt-8">
-    //       <h3 className="text-md font-semibold uppercase text-[#6D6D6D]">Products</h3>
-    //       <ul className="mt-3 space-y-2 text-sm">
-    //         <li><a href="#" className="hover:underline">Starkid App</a></li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </footer>
-    //   );
-    // }
   );
 }

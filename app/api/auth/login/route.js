@@ -17,8 +17,7 @@ export async function POST(req) {
       return Response.json({ message: "Invalid credentials" }, { status: 401 });
 
     const token = await generateToken(user);
-    console.log(token);
-    return Response.json({ token }, { status: 200 });
+    return Response.json({ token ,userId:user._id }, { status: 200 });
   } catch (err) {
     return Response.json(
       { message: "Login failed", error: err.message },

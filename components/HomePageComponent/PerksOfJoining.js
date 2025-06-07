@@ -1,8 +1,4 @@
 import React from "react";
-import join1 from "@/public/asset/join1.png";
-import join2 from "@/public/asset/join2.png";
-import join3 from "@/public/asset/join.png";
-import certficate from "@/public/asset/certificate.png";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { Inter, Poppins, Public_Sans } from "next/font/google";

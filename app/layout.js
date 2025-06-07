@@ -1,5 +1,6 @@
 import { Outfit, Pacifico } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -10,7 +11,7 @@ const outfit = Outfit({
 export const metadata = {
   title: "RJ Manish Chaubey",
   description:
-    "RJ Manish is connecting schools across India and helping their students to find and showcase their unique talent.",
+    "RJ Manish is  helping their students to find and showcase their unique talent.",
   other: {
     // 'theme-color':'#0d1117',
     "theme-color": "#f5f6f9",
@@ -25,7 +26,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable}`}>{children}</body>
+      <body className={`${outfit.variable}`}>
+        {" "}
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }
