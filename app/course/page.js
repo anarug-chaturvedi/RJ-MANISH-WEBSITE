@@ -19,6 +19,9 @@ export default function CoursesPage() {
   const [loading, setLoading] = useState(false);
 
   const getSessionId = async () => {
+    if (!localStorage.getItem("token")) {
+      router.push("/login");
+    }
     // setLoading(true);
     try {
       const { data } = await api.post("/api/payment/new-order", {
