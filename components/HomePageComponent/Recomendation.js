@@ -1,5 +1,4 @@
 import React from "react";
-import recom from "@/public/asset/recom.png";
 import wh1 from "@/public/asset/wh1.png";
 import wh2 from "@/public/asset/wh2.png";
 import wh3 from "@/public/asset/wh3.png";
@@ -42,13 +41,13 @@ export default function Recomendation() {
           <span className="md:hidden"> Their Stories,</span> Their Trust!
         </div>
       </div>
-      <div className="w-full flex gap-[5px]  flex-wrap items-center justify-center">
+      <div className="w-full flex flex-col md:flex-row  gap-[30px] md:gap-6 flex-wrap items-center justify-around">
         <Image
           src={wh1}
           alt="wh1"
           width={253}
           height={186}
-          className=" md:w-[400px] md:h-[357px] "
+          className=" md:w-[300px] md:h-[400px] "
         />
         {/* <div className=" relative w-10/12 sm:w-[280px]">
           <Image
@@ -63,7 +62,7 @@ export default function Recomendation() {
           alt="wh1"
           width={253}
           height={186}
-          className=" md:w-[400px] md:h-[357px] "
+          className=" md:w-[300px] md:h-[400px] "
         />
         {/* <div className=" relative w-10/12 sm:w-[280px]">
           <Image
@@ -78,7 +77,7 @@ export default function Recomendation() {
           alt="wh1"
           width={253}
           height={186}
-          className=" md:w-[400px] md:h-[357px] "
+          className=" md:w-[300px] md:h-[400px] "
         />
         {/* <div className=" relative w-10/12 sm:w-[280px]">
           <Image

@@ -41,7 +41,15 @@ export default function CoursePage() {
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             {currentContent?.url && (
-              <video src={currentContent?.url} controls className="w-full" />
+              <div className="w-full h-full">
+                <iframe
+                  loading="lazy"
+                  title="Gumlet video player"
+                  src={currentContent?.url}
+                  className="border-0 h-full w-full"
+                  allow="accelerometer; gyroscope; encrypted-media; fullscreen;"
+                ></iframe>
+              </div>
             )}
 
             <div className="mt-6 bg-white rounded-lg shadow p-6">

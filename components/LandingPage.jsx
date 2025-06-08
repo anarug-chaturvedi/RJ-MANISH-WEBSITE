@@ -8,9 +8,11 @@ import Faq from "@/components/HomePageComponent/Faq";
 import Footer from "@/components/HomePageComponent/Footer";
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import img from "@/public/asset/hero.png";
 
 import Link from "next/link";
 import Header from "./Header";
+import Image from "next/image";
 
 const publicaSans = localFont({
   src: "../public/fonts/PublicaSans.otf",
@@ -34,8 +36,8 @@ export default function LandingPage() {
     <div className=" min-w-full bg-[#1B1D30] min-h-[100vh] home">
       <Header />
       <div className="">
-        <div className=" flex flex-col md:flex-row md:mb-16 min-h-screen">
-          <div className=" md:w-5/12 lg:mt-[50px] mx-auto text-center flex flex-col  items-center px-2 md:px-0">
+        <div className=" flex flex-col gap-20  md:gap-0 md:flex-row my-20 md:my-16  items-center justify-between">
+          <div className=" md:w-5/12 lg:mt-[50px] mx-auto text-center flex flex-col items-center px-2 md:px-0">
             <p
               className={`${publicaSans.className}text-white text-[33px] font-medium leading-9 `}
             >
@@ -83,6 +85,9 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
+          <div className="md:w-5/12 flex ">
+            <div className="image "></div>
+          </div>
         </div>
 
         <div className=" flex flex-col items-center  justify-center">
@@ -90,10 +95,10 @@ export default function LandingPage() {
 
           <Recomendation />
 
-          <div className=" md:bg-[#EEEFFC] w-full felx-col md:flex md:flex-row-reverse items-center justify-around">
+          {/* <div className=" md:bg-[#EEEFFC] w-full felx-col md:flex md:flex-row-reverse items-center justify-around">
             <HowToRegister />
-          </div>
-          <div className=" flex flex-col md:flex-col-reverse md:p-0 w-full">
+          </div> */}
+          <div className=" flex flex-col md:flex-col-reverse md:p-0 w-full ">
             <WhyJoin />
           </div>
           <Faq />
