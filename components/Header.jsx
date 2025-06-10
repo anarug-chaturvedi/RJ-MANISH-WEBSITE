@@ -15,14 +15,14 @@ export default function Header() {
   //   const isLoggedIn = localStorage.getItem("token");
   return (
     <div className=" flex items-center  justify-between py-[20px] px-5 ">
-      <span className="powerSmurf text-white text-[26px] sm:text-4xl  cursor-pointer font-bold">
+      <span className="powerSmurf text-[#8F87F1] text-[26px] sm:text-4xl  cursor-pointer font-bold">
         RJ Manish
       </span>
       {isLoggedIn === null || isLoggedIn === "" || isLoggedIn === false ? (
         <div className="flex gap-2">
           <button
             onClick={() => router.push("/login")}
-            className=" flex gap-2 py-2 px-4 bg-[#d63970] text-white rounded-md"
+            className=" flex gap-2 py-2 px-4 bg-[#d63970] text-[#8F87F1] rounded-md"
           >
             Login <LogIn />
           </button>
@@ -39,7 +39,7 @@ export default function Header() {
             onClick={() => {
               router.push("/my-course");
             }}
-            className="bg-none underline text-white text-xl hover:cursor-pointer hover:text-[#d63970]"
+            className="bg-none underline text-[#8F87F1] text-xl hover:cursor-pointer hover:text-[#7c72f0]"
           >
             My Courses
           </button>

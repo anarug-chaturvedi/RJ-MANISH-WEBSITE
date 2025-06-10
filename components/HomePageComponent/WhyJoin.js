@@ -24,7 +24,7 @@ export default function WhyJoin() {
     <>
       <div className=" flex flex-col min-w-full items-center justify-center  ">
         <div className={`${publicaSans.className} mt-[33px] text-center px-3 `}>
-          <p className="text-white text-[26px] md:text-[30px] lg:lg:text-[52px] lg:leading-[50px] font-semibold  leading-[30px]">
+          <p className=" text-[26px] md:text-[30px] lg:lg:text-[52px] lg:leading-[50px] font-semibold  leading-[30px]">
             Our courses is perfect for{" "}
           </p>
           <p className="text-[#d63970] text-[26px] md:text-[30px] lg:lg:text-[52px] lg:leading-[50px] font-semibold  leading-[30px]">

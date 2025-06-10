@@ -23,7 +23,7 @@ export default function Recomendation() {
         className={` my-10 ${publicaSans.className} leading-[24.5px] tracking-[-0.41px]`}
       >
         <span
-          className={`text-white text-[26px]  md:text-[52px] md:font-medium md:leading-[53px] font-semibold  ${publicaSans.className} `}
+          className={`text-[#8F87F1] text-[26px]  md:text-[52px] md:font-medium md:leading-[53px] font-semibold  ${publicaSans.className} `}
         >
           Hear It from
         </span>

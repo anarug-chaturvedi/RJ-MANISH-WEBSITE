@@ -33,13 +33,13 @@ const caros = localFont({
 
 export default function LandingPage() {
   return (
-    <div className=" min-w-full bg-[#1B1D30] min-h-[100vh] home">
+    <div className=" min-w-full min-h-[100vh] home">
       <Header />
       <div className="">
         <div className=" flex flex-col gap-20  md:gap-0 md:flex-row my-20 md:my-16  items-center justify-between">
           <div className=" md:w-5/12 lg:mt-[50px] mx-auto text-center flex flex-col items-center px-2 md:px-0">
             <p
-              className={`${publicaSans.className}text-white text-[33px] font-medium leading-9 `}
+              className={`${publicaSans.className}text-[#0B1D51] text-[33px] font-medium leading-9 `}
             >
               <span
                 className={`${publicaSans.className} text-green-500  underline   text-[33px] md:text-4xl xl:text-4xl md:leading-[110%] tracking-tight font-medium`}
@@ -47,13 +47,13 @@ export default function LandingPage() {
                 RJ MANISH CHAUBEY{" "}
               </span>
               <span
-                className={`${publicaSans.className} text-white text-[33px] md:text-4xl xl:text-4xl md:leading-[110%] tracking-tight font-medium`}
+                className={`${publicaSans.className} text-[#0B1D51] text-[33px] md:text-4xl xl:text-4xl md:leading-[110%] tracking-tight font-medium`}
               >
                 GENERATE YOUR 2ND SOURCE OF INCOME{" "}
               </span>
               <br />
               <span
-                className={`${publicaSans.className}  text-white text-[33px] md:text-3xl md:leading-[110%] tracking-tight font-medium`}
+                className={`${publicaSans.className}  text-[#0B1D51] text-[33px] md:text-3xl md:leading-[110%] tracking-tight font-medium`}
               >
                 By creating short videos
               </span>
@@ -63,7 +63,7 @@ export default function LandingPage() {
 
             <div className="hidden md:block">
               <p
-                className={`text-white font-medium mt-[100px] lg:mt-[150px] text-xl md:text-2xl leading-[25px] ${inter.className}`}
+                className={`text-[#0B1D51] font-medium mt-[100px] lg:mt-[150px] text-xl md:text-2xl leading-[25px] ${inter.className}`}
               >
                 Register Now in Our Courses
               </p>
@@ -79,7 +79,7 @@ export default function LandingPage() {
                 </div>
               </Link>
               <p
-                className={`${caros.className} text-white text-lg mt-[23px] md:text-xl text-center`}
+                className={`${caros.className} text-[#0B1D51] text-lg mt-[23px] md:text-xl text-center`}
               >
                 Get the benefit of all exclusive content !
               </p>
