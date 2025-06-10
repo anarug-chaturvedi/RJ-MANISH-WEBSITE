@@ -79,7 +79,7 @@ export default function CoursesPage() {
   useEffect(() => {
     // Load Cashfree client-side
     const initCashfree = async () => {
-      const cf = await load({ mode: "sandbox" });
+      const cf = await load({ mode: "production" });
       setCashfree(cf);
       setVersion(cf?.version());
     };
@@ -202,7 +202,7 @@ export default function CoursesPage() {
                 />
                 <div className="absolute top-4 right-4">
                   <div className="bg-green-600 text-white px-3 py-1 rounded-md text-lg font-semibold">
-                    ${selectedCourse.price}
+                    Rs {selectedCourse.price}
                   </div>
                 </div>
               </div>

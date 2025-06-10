@@ -4,6 +4,7 @@ import CourseContent from "@/components/CourseContent";
 import api from "@/lib/axiox";
 import { useEffect, useState } from "react";
 import { useSearchParams, useParams } from "next/navigation";
+import ReactPlayer from "react-player";
 
 export default function CoursePage() {
   const params = useParams();
@@ -40,17 +41,24 @@ export default function CoursePage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            {currentContent?.url && (
-              <div className="w-full h-full">
-                <iframe
-                  loading="lazy"
-                  title="Gumlet video player"
-                  src={currentContent?.url}
-                  className="border-0 h-full w-full"
-                  allow="accelerometer; gyroscope; encrypted-media; fullscreen;"
-                ></iframe>
-              </div>
-            )}
+            <div className="w-full">
+              {currentContent?.url && (
+                <ReactPlayer
+                  style={{ width: "100%" }}
+                  url={currentContent?.url}
+                  controls={true}
+                  playing={false}
+                  config={{
+                    file: {
+                      attributes: {
+                        controlsList: "nodownload",
+                        onContextMenu: (e) => e.preventDefault(),
+                      },
+                    },
+                  }}
+                />
+              )}
+            </div>
 
             <div className="mt-6 bg-white rounded-lg shadow p-6">
               <h2 className="text-2xl font-bold mb-4">About this lesson</h2>

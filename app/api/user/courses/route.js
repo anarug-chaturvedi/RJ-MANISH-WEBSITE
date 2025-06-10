@@ -8,8 +8,8 @@ export async function GET(req) {
     const userInfo = await authMiddleware(req);
     if (!userInfo || userInfo.status === 511)
       return Response.json({ message: "Unauthorized" }, { status: 511 });
-
     const user = await User.findById(userInfo.id).populate("enrolledCourses");
+    console.log(user);
 
     return Response.json({ courses: user.enrolledCourses }, { status: 200 });
   } catch (err) {
