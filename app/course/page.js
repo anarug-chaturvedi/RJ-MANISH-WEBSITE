@@ -152,13 +152,14 @@ export default function CoursesPage() {
                     {truncateDescription(course.description)}
                   </p>
                   <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <span>{course.content.length} lessons</span>
+                    <span>{course?.length} lessons</span>
                   </div>
                   <button
                     onClick={() => {
                       if (course.isEnrolled) {
                         router.push("/my-course");
                       } else {
+                        console.log(course, "this is selcted course");
                         setSelectedCourse(course);
                       }
                     }}
@@ -193,7 +194,7 @@ export default function CoursesPage() {
             <div className="p-6 space-y-6">
               {/* Course Image and Price */}
               <div className="relative">
-                <Image
+                <img
                   src={selectedCourse.thumbnail || "/placeholder.svg"}
                   alt={selectedCourse.title}
                   width={800}
@@ -223,7 +224,7 @@ export default function CoursesPage() {
                   Course Content
                 </h3>
                 <div className="space-y-2">
-                  {selectedCourse.content.map((item, index) => (
+                  {selectedCourse?.courseSummary?.map((item, index) => (
                     <div
                       key={index}
                       className={`flex items-center space-x-3 p-3 rounded-lg border ${
@@ -255,11 +256,11 @@ export default function CoursesPage() {
                   ))}
                 </div>
 
-                {selectedCourse.content.length > 3 && (
+                {selectedCourse?.courseSummary?.length > 3 && (
                   <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
                     <p className="text-sm text-blue-800">
                       <strong>Preview:</strong> . Purchase the course to unlock
-                      all {selectedCourse.content.length} lessons.
+                      all {selectedCourse?.courseSummary?.length} lessons.
                     </p>
                   </div>
                 )}

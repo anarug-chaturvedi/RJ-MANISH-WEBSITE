@@ -12,26 +12,37 @@ export async function GET(req) {
     //   return Response.json({ message: "Unauthorized" }, { status: 511 });
     // }
 
-    const courses = await Course.aggregate([
+    // const courses = await Course.aggregate([
+    //   {
+    //     $project: {
+    //       title: 1,
+    //       description: 1,
+    //       thumbnail: 1,
+    //       price: 1,
+    //       content: {
+    //         $map: {
+    //           input: "$content",
+    //           as: "item",
+    //           in: {
+    //             type: "$$item.type",
+    //             title: "$$item.title",
+    //           },
+    //         },
+    //       },
+    //     },
+    //   },
+    // ]);
+    const courses = await Course.find(
+      {},
       {
-        $project: {
-          title: 1,
-          description: 1,
-          thumbnail: 1,
-          price: 1,
-          content: {
-            $map: {
-              input: "$content",
-              as: "item",
-              in: {
-                type: "$$item.type",
-                title: "$$item.title",
-              },
-            },
-          },
-        },
-      },
-    ]);
+        _id: 1,
+        title: 1,
+        description: 1,
+        thumbnail: 1,
+        price: 1,
+        courseSummary: 1,
+      }
+    ).lean();
 
     if (!userDetails) {
       return Response.json(

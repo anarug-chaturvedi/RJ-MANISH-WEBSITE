@@ -15,6 +15,12 @@ const courseSchema = new mongoose.Schema({
     type: [contentSchema],
     required: true,
   },
+  courseSummary: [
+    {
+      title: { type: String, required: true },
+      type: { type: String, required: true },
+    },
+  ],
 });
 
 const Course = mongoose.models.Course || mongoose.model("Course", courseSchema);
