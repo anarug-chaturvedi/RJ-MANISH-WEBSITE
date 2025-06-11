@@ -132,7 +132,7 @@ export default function CoursesPage() {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="relative">
-                  <Image
+                  <img
                     src={course.thumbnail || "/placeholder.svg"}
                     alt={course.title}
                     width={300}
