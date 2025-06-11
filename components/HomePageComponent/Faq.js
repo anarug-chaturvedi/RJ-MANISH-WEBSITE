@@ -173,11 +173,7 @@ export default function Faq({ pricing, success }) {
       }  flex items-center justify-center flex-col text-black`}
     >
       <h2
-        className={`${
-          publicaSans.className
-        } text-[24px] lg:text-[57px] lg:text-center  font-semibold mb-6  mt-10 lg:my-[61px] w-[90%] md:w-[80%] leading-[25px] tracking-[-0.41px] ${
-          pricing ? "md:text-[#EEEFFC]" : "md:text-[#1B1D30]"
-        } ${success ? "text-[#1B1D30]" : "text-[#EEEFFC]"} `}
+        className={`${publicaSans.className} text-[24px] lg:text-[57px] lg:text-center  font-semibold mb-6  mt-10 lg:my-[61px] w-[90%] md:w-[80%] leading-[25px] tracking-[-0.41px] `}
       >
         Frequently asked questions <span className="text-[#D73970]">(FAQ)</span>
       </h2>

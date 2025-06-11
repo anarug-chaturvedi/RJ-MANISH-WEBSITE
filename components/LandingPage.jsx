@@ -13,6 +13,7 @@ import img from "@/public/asset/hero.png";
 import Link from "next/link";
 import Header from "./Header";
 import Image from "next/image";
+import Stats from "./PricingPageComponent/Stats";
 
 const publicaSans = localFont({
   src: "../public/fonts/PublicaSans.otf",
@@ -94,16 +95,46 @@ export default function LandingPage() {
           <CompetitionRegistration />
 
           <Recomendation />
+          <div className="w-full mx-auto flex items-center justify-around my-10 md:my-20">
+            <div className="flex justify-center items-center gap-20 flex-wrap">
+              <div className="w-[80%] md:w-[20%]">
+                <p className="text-2xl  md:text-3xl font-bold text-[#0B1D51] ">
+                  <span className="underline">
+                    FROM A BOY WHO EARN 40,000 IN A MONTH TO EARNING 60 LAKH IN
+                    A YEAR.
+                  </span>
+                  <span className="text-xl mt-5 block font-medium ">
+                    We want you to learn the skills on our platform and use it
+                    to showcase you talent over socail media and generate your
+                    2nd source of income
+                  </span>{" "}
+                </p>
+              </div>
+              <div className="">
+                <video
+                  src="asset/vid1.mp4"
+                  width={300}
+                  controls
+                  muted
+                  autoPlay
+                />
+                {/* <video src="asset/vid2.mp4" width={200} controls muted /> */}
+              </div>
+            </div>
+          </div>
+        </div>
 
-          {/* <div className=" md:bg-[#EEEFFC] w-full felx-col md:flex md:flex-row-reverse items-center justify-around">
+        {/* <div className=" md:bg-[#EEEFFC] w-full felx-col md:flex md:flex-row-reverse items-center justify-around">
             <HowToRegister />
           </div> */}
-          <div className=" flex flex-col md:flex-col-reverse md:p-0 w-full ">
-            <WhyJoin />
-          </div>
-          <Faq />
-          <Footer />
+        <div className=" flex flex-col md:flex-col-reverse md:p-0 w-full ">
+          <WhyJoin />
         </div>
+        <div className="mb-5 w-full">
+          <Stats />
+        </div>
+        <Faq />
+        <Footer />
       </div>
     </div>
   );

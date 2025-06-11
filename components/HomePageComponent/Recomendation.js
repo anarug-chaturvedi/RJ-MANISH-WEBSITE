@@ -35,7 +35,7 @@ export default function Recomendation() {
           <span className="hidden md:inline"> Their Stories,</span>
         </span>
         <div
-          className={`text-white text-[26px]  md:text-[52px] md:font-medium md:leading-[53px] font-semibold  ${publicaSans.className} `}
+          className={`text-green-500 text-[26px]  md:text-[52px] md:font-medium md:leading-[53px] font-semibold  ${publicaSans.className} `}
         >
           {" "}
           <span className="md:hidden"> Their Stories,</span> Their Trust!
@@ -47,16 +47,9 @@ export default function Recomendation() {
           alt="wh1"
           width={253}
           height={186}
-          className=" md:w-[300px] md:h-[400px] "
+          className="s md:w-[300px] md:h-[400px] "
         />
-        {/* <div className=" relative w-10/12 sm:w-[280px]">
-          <Image
-            src={recom}
-            alt="recom"
-            width={50}
-            className="absolute -top-5 -right-5"
-          />
-        </div> */}
+
         <Image
           src={wh2}
           alt="wh1"
@@ -64,14 +57,7 @@ export default function Recomendation() {
           height={186}
           className=" md:w-[300px] md:h-[400px] "
         />
-        {/* <div className=" relative w-10/12 sm:w-[280px]">
-          <Image
-            src={recom}
-            alt="recom"
-            width={50}
-            className="absolute -top-5 -right-5"
-          />
-        </div> */}
+
         <Image
           src={wh3}
           alt="wh1"
@@ -79,20 +65,8 @@ export default function Recomendation() {
           height={186}
           className=" md:w-[300px] md:h-[400px] "
         />
-        {/* <div className=" relative w-10/12 sm:w-[280px]">
-          <Image
-            src={recom}
-            alt="recom"
-            width={50}
-            className="absolute -top-5 -right-5"
-          />
-        </div> */}
       </div>
-      {/* <button
-        className={`${poppins.className} my-10 bg-[#5259AA] font-bold text-white py-4 px-8 rounded-lg text-lg`}
-      >
-        REGISTER NOW
-      </button> */}
+
       <div className="mb-[30px] mt-[25px] text-center px-7 py-[13px] bg-[#d63970] rounded-[10px] justify-center items-center gap-2.5 inline-flex">
         <Link
           href={"/"}
