@@ -12,7 +12,7 @@ export async function GET(req, { params }) {
     const course = await Course.findByIdAndUpdate(
       params.id,
       {
-        price: 2,
+        price: 499,
       },
       {
         new: true,
