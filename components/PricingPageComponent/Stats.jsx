@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import React from "react";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
+import { FaYoutube } from "react-icons/fa";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function Stats() {
         <p
           className={`text-xl font-bold md:text-xl tracking-wide ${poppins.className}`}
         >
-          100k Followers
+          644k + Followers
         </p>
         <p className={`${caros.className} tracking-tight`}>
           {" "}
@@ -31,13 +32,13 @@ export default function Stats() {
         <p
           className={`text-xl font-bold md:text-xl tracking-wide ${poppins.className}`}
         >
-          10,000 + Connections
+          20.1k + Subscribers
         </p>
         <p className={`${caros.className} tracking-tight`}>
-          <BiLogoFacebook size={50} />
+          <FaYoutube size={50} />
         </p>
       </div>
-      <div className=" w-full md:w-4/12 flex flex-col gap-1 md:gap-2 md:text-lg items-center justify-center">
+      {/* <div className=" w-full md:w-4/12 flex flex-col gap-1 md:gap-2 md:text-lg items-center justify-center">
         <p
           className={`text-xl font-bold md:text-xl tracking-wide ${poppins.className}`}
         >
@@ -46,7 +47,7 @@ export default function Stats() {
         <p className={`${caros.className} tracking-tight`}>
           <BiLogoTwitter size={50} />
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
